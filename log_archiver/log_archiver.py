@@ -104,7 +104,7 @@ def find_files(path: List[str], now: float, log_expiry_age_days: int) -> tuple[s
             valid_format_uncompressed = re.search(r'\.\d{4}-\d{2}-\d{2}.log$', f)
             valid_format_compressed = re.search(r'\.\d{4}-\d{2}-\d{2}.log.gz$', f)
 
-            upload_date_check = os.stat(abs_file_path).st_mtime < now - (1 * 60)
+            upload_date_check = os.stat(abs_file_path).st_mtime < now - 86400 # Only consider files modified more than 1 day ago.
 
             if os.path.isfile(abs_file_path):
                 if valid_format_uncompressed and upload_date_check:
