@@ -11,6 +11,7 @@ $ git clone https://github.com/tv-17/log_archiver
 $ sudo apt install python3.10-venv
 $ python3 -m venv env
 $ source env/bin/activate
+$ cd log_archiver
 $ python3 -m pip install .
 ```
 
