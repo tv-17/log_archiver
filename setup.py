@@ -10,6 +10,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        log_archiver=cli:cli
+        log_archiver=log_archiver.cli:cli
     ''',
 )
