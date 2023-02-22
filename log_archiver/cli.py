@@ -1,5 +1,5 @@
 import click
-import log_archiver
+from . import log_archiver
 
 
 @click.command()
