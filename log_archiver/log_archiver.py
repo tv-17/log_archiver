@@ -195,7 +195,7 @@ def handler(**kwargs):
     business_unit = kwargs.get('business_unit')
     environment = kwargs.get('environment')
     bucket = kwargs.get('bucket')
-    hostname = kwargs.get('hostname', socket.gethostname())
+    hostname = kwargs.get('hostname') if kwargs.get('hostname') else socket.gethostname()
     dry_run = kwargs.get('dry_run', False)
     log_path = kwargs.get('log_path')
 

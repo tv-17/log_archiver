@@ -9,6 +9,6 @@ from . import log_archiver
 @click.option('--business_unit', required=True, help='log_archiver will target logs in this directory.')
 @click.option('--environment', required=True, help='log_archiver will target logs in this directory.')
 @click.option('--bucket', required=True, help='Name of S3 bucket to store logs.')
-@click.option('--hostname', required=True, default="localhost", help='Hostname to namespace application log')
+@click.option('--hostname', help='Hostname to namespace application log')
 def cli(**kwargs):
     log_archiver.handler(**kwargs)
